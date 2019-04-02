@@ -6,7 +6,7 @@ typedef struct stack
     struct stack *next;
 }                     STACK;
 STACK *head, *pr;
-int nodeNum = 0;                            /* 堆栈节点数寄存器 */
+int nodeNum = 0;                           
 STACK *CreateNode(int num);
 STACK *PushStack(int num);
 int PopStack(void);
@@ -27,7 +27,7 @@ int main()
     }
     return 0;
 }
-/* 函数功能：生成一个新的节点，并为该节点赋初值，返回指向新的节点的指针 */
+
 STACK *CreateNode(int num)
 {
     STACK *p;
@@ -37,46 +37,46 @@ STACK *CreateNode(int num)
         printf("No enough memory!\n");
         exit(0);
     }
-    p->next = NULL;              /* 为新建的节点指针域赋空指针 */
-    p->data = num;                   /* 为新建的节点数据区赋值 */
+    p->next = NULL;              
+    p->data = num;                   
     return p;
 }
-/*  函数功能：将整型变量num的值压入堆栈，返回指向链表新节点的指针 */
+
 STACK *PushStack(int num)
 {
-    if (nodeNum == 0) /* 若为首节点，则保留该节点地址在head中*/
+    if (nodeNum == 0) 
     {
         head = CreateNode(num);
         pr = head;
-        nodeNum++;  /* 堆栈节点数寄存器+1 */
+        nodeNum++;  
     }
-    else             /* 若不是首节点，则将新建节点连到链表的结尾处 */
+    else             
     {
         pr->next = CreateNode(num);
         pr = pr->next;
-        nodeNum++;  /* 堆栈节点数寄存器+1 */
+        nodeNum++;  
     }
     return pr;
 }
-/*  函数功能：将当前栈顶的数据弹出堆栈，返回从堆栈中弹出的数据 */
+
 int PopStack(void)
 {
     STACK *p = head;
     int result;
     for (;;)
     {
-        if (p->next == NULL)     /* 查找最后一个节点 */
+        if (p->next == NULL)     
         {
             break;
         }
         else
         {
-            pr = p;             /* 记录最后一个节点的前一个节点的地址 */
+            pr = p;             
             p = p->next;
-            nodeNum--;          /* 堆栈节点数寄存器-1 */
+            nodeNum--;         
         }
     }
-    pr->next = NULL;          /* 将末节点的前一个节点置成末节点 */
+    pr->next = NULL;   
     result = p->data;
     free(p);
     return result;
