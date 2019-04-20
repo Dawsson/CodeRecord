@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define  ROW 2
 #define  COL 3
-int main(void)
+int main()
 {
     int  a[ROW][COL] = {1,4,6,8,10,12};
     int  i, j, temp;

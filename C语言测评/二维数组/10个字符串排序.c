@@ -3,15 +3,13 @@
 void Input(char a[][80], int n);
 void Sort(char a[][80], int n);
 void Print(char a[][80], int n);
-int main()
+void main()
 {
     char a[10][80];
 
-    Input(a, 10);    //1
-    Sort(a, 10);     //1
-    Print(a, 10);    //1
-
-    return 0;
+    Input(a, 10);
+    Sort(a, 10);
+    Print(a, 10);
 }
 void Input(char a[][80], int n)
 {

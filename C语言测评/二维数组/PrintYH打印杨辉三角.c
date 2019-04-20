@@ -1,5 +1,6 @@
 #include<stdio.h>
 #define  N  15
+
 void CaculateYH(int a[][N], int n);
 void PrintYH(int a[][N], int n);
 int main()

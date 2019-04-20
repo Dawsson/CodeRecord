@@ -12,6 +12,7 @@ void main()
     printf("\n输入列数：");
     scanf("%d",&col);
 
+    //row=2,col=6;
     for(i=0;i<row;i++){
         printf("第%d行？\n",i);
         for(j=0;j<col;j++){

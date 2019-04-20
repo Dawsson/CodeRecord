@@ -1,19 +1,28 @@
 #include <stdio.h>
 
+
 void main()
 {
     int i=0,j=0;
     int rows[5],cols[5],d1=0,d2=0;
     int flag = 1;
 
-   int nums[5][5] =
+   /*int nums[5][5] =
    {
         {17,24,1,8,15},
         {23,5,7,14,16},
         {4,6,13,20,22},
         {10,12,19,21,3},
         {11,18,25,2,9}
-   };
+   };*/
+
+   int nums[5][5];
+   for(i=0;i<5;i++){
+     for(j=0;j<5;j++){
+        scanf("%d",&nums[i][j]);
+     }
+   }
+
 
    // init 0
    for(i=0;i<5;i++){
@@ -64,8 +73,9 @@ void main()
             printf("%4d",nums[i][j]);
         }
         printf("\n");
-   }
-
+     }
+   }else{
+       printf("It is not a magic square!\n");
    }
 
 }

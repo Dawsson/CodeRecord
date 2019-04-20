@@ -31,5 +31,5 @@ void main()
 
     sum=AddDiagonal(a,n-1);
 
-    printf("sum=d\n",sum);
+    printf("sum = %d\n",sum);
 }
