@@ -3,18 +3,20 @@
 
 void CaculateYH(int a[][N], int n);
 void PrintYH(int a[][N], int n);
-int main()
+void main()
 {
     int a[N][N] = {0}, n;
     printf("Input n(n<15):\n");
     scanf("%d", &n);
     CaculateYH(a, n);
     PrintYH(a, n);
-    return 0;
+
 }
 void CaculateYH(int a[][N], int n)
 {
     int i, j;
+
+    // 初始化每行的第一列和最后一列为 1
     for (i = 0; i < n; i++)
     {
         a[i][0] = 1;

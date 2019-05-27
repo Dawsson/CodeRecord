@@ -25,7 +25,6 @@ int DayofYear(int year, int month, int day)
       leap = 0;
     }
 
-
     for (i=0; i < month; i++)
     {
         day = day + dayTab[leap][i];

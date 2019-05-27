@@ -10,12 +10,10 @@ int main()
     gets(x);
 
     i=0,findFlag=0;
-    while (i<6 || !findFlag)
+    while (i<6 && !findFlag)
     {
-        printf("×Ö·û´®:%s",x);
-        if (strcmp(x,str[i] == 0))
+        if (strcmp(x,str[i]) == 0)
         {
-            printf("×Ö·û´®:%s",str[i]);
             findFlag = 1;
         }
          i++;

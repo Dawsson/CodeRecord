@@ -1,22 +1,23 @@
 #include<stdio.h>
 #include<string.h>
-#define MAX 8
-#define CMAX 10
-/*
-对输入的8个字符串(每个字符串长度不超过20)按照字典顺序进行排序并输出。不限定排序方法，不能使用goto语句。
-*/
+#define N 5
+#define CMAX 20
+
 int main()
 {
-    char a[MAX][CMAX], term[CMAX];
+    char a[N][CMAX], term[CMAX];
     int i, j;
-    for (i = 0; i < 8; i++)
+
+     printf("Input five countries' names:\n");
+    for (i = 0; i < N; i++)
     {
-        scanf("%s", a[i]);
+        //scanf("%s", a[i]);
+        gets(a[i]);
     }
 
-    for (i = 0; i < 8 - 1; i++)
+    for (i = 0; i < N - 1; i++)
     {
-        for (j = 1; j < 8 - i; j++)
+        for (j = 1; j < N - i; j++)
         {
             if (strcmp(a[j], a[j - 1]) < 0)
             {
@@ -26,9 +27,12 @@ int main()
             }
         }
     }
-    for (i = 0; i < 8; i++)
+
+    printf("The minimum is:%s\n", a[0]);
+    for (i = 0; i < N; i++)
     {
         printf("%s\n", a[i]);
     }
+
     return 0;
 }

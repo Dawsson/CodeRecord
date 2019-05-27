@@ -59,6 +59,7 @@ void read(char *str)
         default:
             return;
         }
+
         switch (strlen(str))
         {
         case 9:

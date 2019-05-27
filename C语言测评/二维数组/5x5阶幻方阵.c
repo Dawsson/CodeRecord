@@ -42,7 +42,7 @@ void main()
    }
 
    // dui jiao xian
-    d1 = 0;
+   d1 = 0;
    for(i=0,j=0;i<5&&j<5;j++,i++){
         d1 = d1+nums[i][j];
    }

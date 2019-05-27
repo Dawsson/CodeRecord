@@ -1,6 +1,6 @@
 #include <stdio.h>
 int a[2][3]={{1,2,3},{4,5,6}};
-main()
+void main()
 {
     int i,j,b[3][2];
     for(i=0;i<=1;i++)

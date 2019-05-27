@@ -5,6 +5,7 @@ int main()
     int a[6][6];
     int i, j, n, tep;
 
+    printf("please input n:");
     scanf("%d", &n);
     for (i = 0; i < n; i++)
     {
@@ -13,12 +14,12 @@ int main()
             a[i][j] = i * n + j + 1;
         }
     }
-    printf("The original matrix is:\n");
+    printf("转置前：\n");
     for (i = 0; i < n; i++)
     {
         for (j = 0; j < n; j++)
         {
-            printf("%3d", a[i][j]);
+            printf("%4d", a[i][j]);
         }
         printf("\n");
     }
@@ -36,12 +37,12 @@ int main()
             }
         }
     }
-    printf("The changed matrix is:\n");
+    printf("转置后：\n");
     for (i = 0; i < n; i++)
     {
         for (j = 0; j < n; j++)
         {
-            printf("%3d", a[i][j]);
+            printf("%4d", a[i][j]);
         }
         printf("\n");
     }

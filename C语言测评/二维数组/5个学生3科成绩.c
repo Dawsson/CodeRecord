@@ -5,7 +5,6 @@ void main(){
     int stu[5][7];
     int sum=0,avg=0,flag=89;
 
-    
     for(i=0;i<5;i++){
         sum=0,avg=0,flag=89;
         printf("Enter No. and score as: MT EN PH\n");
